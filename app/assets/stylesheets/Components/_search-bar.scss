@@ -1,0 +1,15 @@
+.search-bar {
+	width: calc(50% - 1em);
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	margin-bottom: 4em;
+	float: left
+}
+
+@media #{$small-only} {
+	.search-bar {
+		width: calc(100% - 1em);
+		margin-bottom: 2em;
+	}
+}
+

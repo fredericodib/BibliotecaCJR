@@ -1,0 +1,16 @@
+.box-books.book_list
+	strong.title
+		=link_to book, 'data-book': '' do
+			= book.name 
+	img.image src='#{book.image}'
+
+	h3.code
+		=book.code
+	- if book.active == true
+		=link_to rent_book_path(book), class: 'btn btn-success active', data: { confirm: 'Deseja alugar este livro?' } do
+			strong
+				span Disponivel
+	- else
+		=link_to rent_book_path(book), class: 'btn btn-danger active', data: { confirm: 'Deseja alugar este livro?' } do
+			strong
+				span Alugado

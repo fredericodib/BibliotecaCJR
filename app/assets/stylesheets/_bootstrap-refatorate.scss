@@ -1,0 +1,29 @@
+nav.navbar-transparente {
+	padding: 5px 0px;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.navbar-brand{
+	padding: 0px 0px;
+	height: 70px;
+}
+
+
+.navbar-inverse .navbar-nav>li>a {
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: #9bf0e1;
+}
+
+.btn-right {
+	float: right;
+	margin-left: 1em;
+}
+
+.clearfix {
+	clear: both;
+}

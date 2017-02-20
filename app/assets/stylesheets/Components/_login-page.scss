@@ -1,0 +1,39 @@
+.login-page {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #f3f3f3;
+
+	> .block {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 40%;
+		background-color: #fff;
+		padding: 2em;
+		border: 1px solid gray;
+		border-radius: 4px;
+	}
+}
+
+
+@media #{$small-only} {
+	.login-page {
+		.block {
+			padding: 1em;
+			width: 90%;
+		}
+	}
+}
+
+@media #{$medium-only} {
+	.login-page {
+		.block {
+			padding: 1em;
+			width: 50%;
+		}
+	}
+}

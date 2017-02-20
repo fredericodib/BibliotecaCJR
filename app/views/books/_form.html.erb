@@ -1,0 +1,30 @@
+<%= simple_form_for(@book) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name, label: "Nome" %>
+    <%= f.input :description, label: "Descrição" %>
+    <%= f.input :writer, label: "Autor" %>
+    <%= f.input :code, label: "Codigo" %>
+    <hr>
+    <%= f.label 'Imagem' %>
+    <%= f.file_field :image %>
+    <hr>
+    <%= hidden_field_tag("book[category_ids][]", nil) %>
+    <div class="row">
+      <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, {:item_wrapper_class => 'col-xs-6 col-sm-4'} do |category| %>
+        <div>
+          <%= category.check_box  class: "icheck-me", data: { 'skin' => 'square', 'color' => 'blue' } %>
+          &nbsp;
+          <%= category.text %>
+        </div>
+        <br>
+      <% end %>
+    </div>
+  </div>
+  <br>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,154 @@
+<div class="page-header">
+  <h1>Admin Controle</h1>
+</div><!-- page-header -->
+
+<!-- Criação das abas -->
+<!-- <ul class="nav nav-pills" role="tablist"> -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#livros" role="tab" data-toggle="tab">Livro Alugados</a></li>
+  <li><a href="#devolucao" role="tab" data-toggle="tab">Confirmar Devolução</a></li>
+  <li><a href="#historico" role="tab" data-toggle="tab">Historico de locações</a></li>
+  <li><a href="#usuarios" role="tab" data-toggle="tab">Todos os Usuarios</a></li>
+</ul>
+
+<!-- Conteúdo das abas -->
+<div class="tab-content">
+
+  <!-- aba Meus livros -->
+  <div class="tab-pane active" role="tabpanel" id="livros">
+    <h3>Devolver Livro</h3>
+    <p>Ver todos os livros alugados</p>
+    <p>So marque como devolvido por aqui se o dono não puder mais colocar como pendente</p>
+    <br>
+    <br>
+    <h3>Atrasados</h3>
+    <% if @orders_late.empty? %>
+        <div class="box-imput">
+          <h4>Nenhum livro atrasado</h4>
+        </div>
+      <% else %>
+        <% @orders_late.each do |order| %>
+          <h3><%= order.book.name %></h4>
+           <div class="box-imput">
+            <p>Usuario: <strong><%= order.user.name %></strong> </p>
+          </div>
+          <div class="box-imput">
+            <p>Pego emprestado em: <strong><%= order.created_at - 3.hour %></strong> </p>
+          </div>
+          <div class="box-imput">
+           <p>status: 
+              <%= link_to "Atrasado", confirm_return_path(order), class: "btn btn-danger", data: { confirm: 'O livro foi devolvido?' }%>
+            </p>
+          </div>
+        <% end %>
+      <% end %>
+    
+    <h3>Alugados</h3>
+    <% if @orders_rented.empty? %>
+        <div class="box-imput">
+          <h4>Nenhum livro alugado</h4>
+        </div>
+    <% else %>
+        <% @orders_rented.each do |order| %>
+          <h3><%= order.book.name %></h4>
+           <div class="box-imput">
+            <p>Usuario: <strong><%= order.user.name %></strong> </p>
+          </div>
+          <div class="box-imput">
+            <p>Pego emprestado em: <strong><%= order.created_at - 3.hour %></strong> </p>
+          </div>
+          <div class="box-imput">
+           <p>status: 
+              <%= link_to "Alugado", confirm_return_path(order), class: "btn btn-info", data: { confirm: 'O livro foi devolvido?' }%>
+            </p>
+          </div>
+        <% end %>
+      <% end %>
+
+
+
+
+  </div>
+
+  <div class="tab-pane" role="tabpanel" id="devolucao">
+    <h3>Confirmar Devolução</h3>
+    <% if @orders_confirmation.empty? %>
+        <div class="box-imput">
+          <h4>Nenhum livro pendente</h4>
+        </div>
+      <% else %>
+        <% @orders_confirmation.each do |order| %>
+          <h3><%= order.book.name %></h4>
+           <div class="box-imput">
+            <p>Usuario: <strong><%= order.user.name %></strong> </p>
+          </div>
+          <div class="box-imput">
+            <p>Pego emprestado em: <strong><%= order.created_at - 3.hour %></strong> </p>
+          </div>
+          <div class="box-imput">
+           <p>status: 
+              <%= link_to "Pendente", confirm_return_path(order), class: "btn btn-warning", data: { confirm: 'O livro foi devolvido?' }%>
+            </p>
+          </div>
+        <% end %>
+      <% end %>
+  </div>
+
+  <!-- aba Trocar a historico -->
+  <div class="tab-pane" role="tabpanel" id="historico">
+    <h3>Historico de locações</h3>
+    <% if @orders_returned.empty? %>
+        <div class="box-imput">
+          <h4>Nenhum livro devolvido</h4>
+        </div>
+      <% else %>
+        <% @orders_returned.each do |order| %>
+          <h3><%= order.book.name %></h4>
+           <div class="box-imput">
+            <p>Usuario: <strong><%= order.user.name %></strong> </p>
+          </div>
+          <div class="box-imput">
+            <p>Pego emprestado em: <strong><%= order.created_at - 3.hour %></strong> </p>
+          </div>
+          <div class="box-imput">
+            <p>Devolvido em: <strong><%= order.delivery_at  %></strong> </p>
+          </div>
+          <div class="box-imput">
+            <% if (order.returned?) %>
+              <p>status: <span class="btn btn-success">Devolvido</span> </p>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+
+    </div>
+
+  <!-- aba Livro em minha posse -->
+  <div class="tab-pane" role="tabpanel" id="usuarios">
+    <h3>Todos os Usuarios</h3>
+    
+    <table class="table table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Telefone</th>
+          <th>Admin-change</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @all_users.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= user.phone %></td>
+            <td><%= link_to chenge_admin_path(user) do %><%= user.admin %><% end %></td>
+            <td><%= link_to 'Deletar', destroy_user_path(user.id), method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  
+</div>

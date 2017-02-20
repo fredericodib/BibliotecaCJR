@@ -1,0 +1,112 @@
+<div class="page-header">
+  <h1>Gerencia do Usuario</h1>
+</div><!-- page-header -->
+
+<!-- Criação das abas -->
+<!-- <ul class="nav nav-pills" role="tablist"> -->
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#dados" role="tab" data-toggle="tab">Meus Dados</a></li>
+  <li><a href="#senha" role="tab" data-toggle="tab">Trocar a Senha</a></li>
+  <li><a href="#livro" role="tab" data-toggle="tab">Livro em minha posse</a></li>
+  <li><a href="#historico" role="tab" data-toggle="tab">Historico de Livros</a></li>
+</ul>
+
+<!-- Conteúdo das abas -->
+<div class="tab-content">
+
+  <!-- aba Meus Dados -->
+  <div class="tab-pane active" role="tabpanel" id="dados">
+    <h3>Meus Dados</h3>
+    <p>Atualize seus dados caso ainda n estejam atualizados</p>
+    <strong>Email: <%= @user.email %></strong>
+    <br>
+    <br>
+
+        <%= simple_form_for(@user, :url => update_user_path(@user), method: :patch) do |f| %>
+
+      <div class="form-inputs">
+        <%= f.input :phone, label: "Celular" %>
+        <%= f.input :name, label: "Nome" %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Update" %>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- aba Trocar a Senha -->
+  <div class="tab-pane" role="tabpanel" id="senha">
+    <h3>Trocar a Senha</h3>
+
+    <%= simple_form_for(@user, :url => update_user_path(@user), method: :patch) do |f| %>
+
+      <div class="form-inputs">
+        <%= f.input :password, autocomplete: "off", required: true %>
+        <%= f.input :password_confirmation, required: true %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Update" %>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- aba Livro em minha posse -->
+  <div class="tab-pane" role="tabpanel" id="livro">
+    <h3>Livro em minha posse</h3>
+    <p><strong>para devolver basta apenas clicar no botão</strong></p>
+      <% if ((@order.returned?) || (@order == nil)) %>
+        <div class="box-imput">
+          <h4>Nenhum livro em sua posse</h4>
+        </div>
+      <% else %>
+        <h3><%= @order.book.name %></h4>
+        <div class="box-imput">
+          <p>Pego emprestado em: <strong><%= @order.created_at - 3.hour %></strong> </p>
+        </div>
+        <div class="box-imput">
+          <% if (@order.rented?) %>
+            <p>status: 
+              <%= link_to "Alugado", return_book_path(@order), class: "btn btn-info", data: { confirm: 'Livro devolvido?' }%>
+            </p>
+          <% end %>
+          <% if (@order.late?) %>
+            <p>status: 
+              <%= link_to "Atrasado", return_book_path(@order), class: "btn btn-danger", data: { confirm: 'Livro devolvido?' }%>
+            </p>
+          <% end %>
+          <% if (@order.confirmation?) %>
+            <p>status: 
+              <%= link_to "Pendente", return_book_path(@order), class: "btn btn-warning", data: { confirm: 'Livro devolvido?' }%>
+            </p>
+          <% end %>
+        </div>
+      <% end %>
+  </div>
+
+  <div class="tab-pane" role="tabpanel" id="historico">
+    <h3>Historico de Livros</h3>
+    <% if @orders.empty? %>
+        <div class="box-imput">
+          <h4>Nenhum livro devolvido</h4>
+        </div>
+      <% else %>
+        <% @orders.each do |order| %>
+          <h3><%= order.book.name %></h4>
+          <div class="box-imput">
+            <p>Pego emprestado em: <strong><%= order.created_at - 3.hour %></strong> </p>
+          </div>
+          <div class="box-imput">
+            <p>Devolvido em: <strong><%= order.delivery_at  %></strong> </p>
+          </div>
+          <div class="box-imput">
+            <% if (order.returned?) %>
+              <p>status: <span class="btn btn-success">Devolvido</span> </p>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+  </div>
+  
+</div>

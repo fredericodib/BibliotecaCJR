@@ -1,0 +1,44 @@
+<h1 class="title-page">
+  <%= @book.name %>
+</h1>
+
+<div class="image-container">
+	<%= image_tag((@book.image), :class => "image") %>
+</div>
+
+<hr>
+
+<strong>Descrição:</strong>
+<div class="box-imput">
+	<%= markdown(@book.description) %>
+</div>
+
+<strong>Autor:</strong>
+<div class="box-imput">
+	<%= @book.writer %>
+</div>
+
+<strong>Codigo:</strong>
+<div class="box-imput">
+	<%= @book.code %>
+</div>
+
+<hr>
+
+<strong>Categorias</strong>
+<div class="box-imput">
+	<% @book.categories.each do |f| %>
+		<p><%= f.name %></p>
+	<% end %>
+</div>
+
+
+<%= link_to 'Voltar', books_path, class: 'btn btn-info' %>
+
+<% if current_user.admin %>
+	<%= link_to 'Apagar', @book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-right' %>
+	<%= link_to 'Editar', edit_book_path(@book), class: 'btn btn-primary btn-right' %>
+<% end %>
+
+<br>
+<br>

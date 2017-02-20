@@ -1,0 +1,20 @@
+// Defining values
+$small-range-max:   480px;     
+$medium-range-min:  481px;
+$medium-range-max:  1023px; //original 740
+$large-range-min:   1024px; //original 741
+$large-range-max:   1440px;
+$xlarge-range-min:  1441px;
+$xlarge-range-max:  1920px;
+$xxlarge-range-min: 1921px;
+
+
+// Defining media queries
+$small-only:   "only screen and (max-width: #{$small-range-max})" !default;
+$medium-up:    "only screen and (min-width:#{$medium-range-min})" !default;
+$medium-only:  "only screen and (min-width:#{$medium-range-min}) and (max-width:#{$medium-range-max})" !default;
+$large-up:     "only screen and (min-width:#{$large-range-min})" !default;
+$large-only:   "only screen and (min-width:#{$large-range-min}) and (max-width:#{$large-range-max})" !default;
+$xlarge-up:    "only screen and (min-width:#{$xlarge-range-min})" !default;
+$xlarge-only:  "only screen and (min-width:#{$xlarge-range-min}) and (max-width:#{$xlarge-range-max})" !default;
+$xxlarge-up:   "only screen and (min-width:#{$xxlarge-range-min})" !default;
