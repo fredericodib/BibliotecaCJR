@@ -14,6 +14,7 @@ group :production do
 end
 group :development, :test do
   gem 'sqlite3'
+  gem 'mailcatcher'
 end
 
 gem 'rails_12factor', group: :production
@@ -46,7 +47,6 @@ gem 'icheck-rails'
 gem 'redcarpet'
 gem 'slim'
 gem 'devise'
-gem 'mailcatcher'
 gem 'carrierwave'
 gem 'bootstrap', '~> 4.0.0.alpha5'
 gem 'simple_form'
