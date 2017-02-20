@@ -94,7 +94,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
    :address              => "smtp.mailgun.org",
    :port                 => 587,
-   :user_name            => "noe@cjr.org.br",
+   :user_name            => "postmaster@cjr.org.br",
    :password             => "18b594f4d8a1fa6dc012e7cc8df74315",
    :authentication       => "plain",
    :enable_starttls_auto => true
