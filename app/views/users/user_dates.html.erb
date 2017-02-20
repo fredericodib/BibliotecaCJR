@@ -56,7 +56,7 @@
   <div class="tab-pane" role="tabpanel" id="livro">
     <h3>Livro em minha posse</h3>
     <p><strong>para devolver basta apenas clicar no botão</strong></p>
-      <% if ((@order.returned?) || (@order == nil)) %>
+      <% if ((@order == nil) || (@order.returned?)) %>
         <div class="box-imput">
           <h4>Nenhum livro em sua posse</h4>
         </div>

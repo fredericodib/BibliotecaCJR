@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 if User.count == 0
-	User.create(email: "admin@gggg.com", password: "123456", password_confirmation: '123456', admin: true)
+	User.create(email: "admin@cjr.org.br", password: "123456", password_confirmation: '123456', admin: true)
 end
