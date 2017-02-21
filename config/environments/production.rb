@@ -87,8 +87,6 @@ Rails.application.configure do
 
   config.secret_key_base = ENV["SECRET_KEY_BASE"]
 
-  require 'mail'
-
   config.action_mailer.default_url_options = { host: 'http://sgb-cjr.herokuapp.com/' }
 
   config.action_mailer.delivery_method = :smtp
@@ -96,8 +94,8 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
    :address              => "smtp.gmail.com",
    :port                 => 587,
-   :user_name            => "noe@cjr.org.br",
-   :password             => "p455wnoecjr",
+   :user_name            => ENV['GMAIL_SMTP_USER'],
+   :password             => ENV['GMAIL_SMTP_PASSWORD'],
    :authentication       => "plain",
    :enable_starttls_auto => true
   }

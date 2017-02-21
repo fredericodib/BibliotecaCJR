@@ -1,0 +1,137 @@
+Script started on Seg 20 Fev 2017 22:32:33 BRT
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]2;fred@fred-Lenovo-Z40-70: ~/Desktop/BibliotecaCJR]1;..BibliotecaCJR[0m[27m[24m[J[01;32m➜  [36mBibliotecaCJR[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hggit add --all[?1l>[?2004l
+]2;git add --all]1;git[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]2;fred@fred-Lenovo-Z40-70: ~/Desktop/BibliotecaCJR]1;..BibliotecaCJR[0m[27m[24m[J[01;32m➜  [36mBibliotecaCJR[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hggit commit -m ''[1Ch'e'r'o'k'u'[?1l>[?2004l
+]2;git commit -m 'heroku']1;git[master fb12ce8] heroku
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 install
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]2;fred@fred-Lenovo-Z40-70: ~/Desktop/BibliotecaCJR]1;..BibliotecaCJR[0m[27m[24m[J[01;32m➜  [36mBibliotecaCJR[00m [01;34mgit:([31mmaster[34m)[00m [K[?1h=[?2004hggig  git commit -m 'heroku'[18Dadd --all         [9D[13Dscript install git://github.com/adamwiggins/gmail_smtp.git[58Dplugin[52C[58Dscript/plugin install git://github.com/adamwiggins/gmail_smtp.git[65Dheroku run rails console                                         [41D[24Dgit push heroku master  [?1l>[?2004l
+]2;git push heroku master]1;gitCounting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects:  50% (1/2)   Compressing objects: 100% (2/2)   Compressing objects: 100% (2/2), done.
+Writing objects:  50% (1/2)   Writing objects: 100% (2/2)   Writing objects: 100% (2/2), 262 bytes | 0 bytes/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Compressing source files... done.[K
+remote: Building source:[K
+remote: 
+remote: -----> Ruby app detected[K
+remote: -----> Compiling Ruby/Rails[K
+remote: -----> Using Ruby version: ruby-2.2.6[K
+remote: -----> Installing dependencies using bundler 1.13.7[K
+remote:        Running: bundle install --without development:test --path vendor/bundle --binstubs vendor/bundle/bin -j4 --deployment[K
+remote:        Fetching gem metadata from https://rubygems.org/.........[K
+remote:        Fetching version metadata from https://rubygems.org/..[K
+remote:        Fetching dependency metadata from https://rubygems.org/.[K
+remote:        Using rake 12.0.0[K
+remote:        Using concurrent-ruby 1.0.4[K
+remote:        Using i18n 0.8.0[K
+remote:        Using minitest 5.10.1[K
+remote:        Using thread_safe 0.3.5[K
+remote:        Using builder 3.2.3[K
+remote:        Using erubis 2.7.0[K
+remote:        Using mini_portile2 2.1.0[K
+remote:        Using rack 2.0.1[K
+remote:        Using nio4r 1.2.1[K
+remote:        Using websocket-extensions 0.1.2[K
+remote:        Using mime-types-data 3.2016.0521[K
+remote:        Using arel 7.1.4[K
+remote:        Using execjs 2.7.0[K
+remote:        Using bcrypt 3.1.11[K
+remote:        Using sass 3.4.23[K
+remote:        Using chronic 0.10.2[K
+remote:        Using coffee-script-source 1.12.2[K
+remote:        Using method_source 0.8.2[K
+remote:        Using thor 0.19.4[K
+remote:        Using orm_adapter 0.5.0[K
+remote:        Using bundler 1.13.7[K
+remote:        Using tilt 2.0.6[K
+remote:        Using multi_json 1.12.1[K
+remote:        Using mini_magick 4.6.1[K
+remote:        Using pg 0.19.0[K
+remote:        Using puma 3.7.1[K
+remote:        Using redcarpet 3.4.0[K
+remote:        Using temple 0.7.7[K
+remote:        Using turbolinks-source 5.0.0[K
+remote:        Using tzinfo 1.2.2[K
+remote:        Using nokogiri 1.7.0.1[K
+remote:        Using websocket-driver 0.6.5[K
+remote:        Using mime-types 3.1[K
+remote:        Using autoprefixer-rails 6.7.4[K
+remote:        Using uglifier 3.0.4[K
+remote:        Using whenever 0.9.7[K
+remote:        Using coffee-script 2.4.1[K
+remote:        Using rack-test 0.6.3[K
+remote:        Using warden 1.2.7[K
+remote:        Using sprockets 3.7.1[K
+remote:        Using turbolinks 5.0.1[K
+remote:        Using activesupport 5.0.1[K
+remote:        Using loofah 2.0.3[K
+remote:        Using mail 2.6.4[K
+remote:        Using bootstrap 4.0.0.alpha6[K
+remote:        Using slim 3.0.7[K
+remote:        Using rails-dom-testing 2.0.2[K
+remote:        Using globalid 0.3.7[K
+remote:        Using activemodel 5.0.1[K
+remote:        Using jbuilder 2.6.1[K
+remote:        Using rails-html-sanitizer 1.0.3[K
+remote:        Using activejob 5.0.1[K
+remote:        Using activerecord 5.0.1[K
+remote:        Using carrierwave 1.0.0[K
+remote:        Using actionview 5.0.1[K
+remote:        Using actionpack 5.0.1[K
+remote:        Using actioncable 5.0.1[K
+remote:        Using actionmailer 5.0.1[K
+remote:        Using railties 5.0.1[K
+remote:        Using sprockets-rails 3.2.0[K
+remote:        Using simple_form 3.4.0[K
+remote:        Using coffee-rails 4.2.1[K
+remote:        Using responders 2.3.0[K
+remote:        Using jquery-rails 4.2.2[K
+remote:        Using rails 5.0.1[K
+remote:        Using sass-rails 5.0.6[K
+remote:        Using devise 4.2.0[K
+remote:        Using icheck-rails 1.0.2.2[K
+remote:        Bundle complete! 26 Gemfile dependencies, 69 gems now installed.[K
+remote:        Gems in the groups development and test were not installed.[K
+remote:        Bundled gems are installed into ./vendor/bundle.[K
+remote:        Bundle completed (2.59s)[K
+remote:        Cleaning up the bundler cache.[K
+remote:        Detected manifest file, assuming assets were compiled locally[K
+remote: 
+remote: ###### WARNING:[K
+remote:        You have not declared a Ruby version in your Gemfile.[K
+remote:        To set your Ruby version add this line to your Gemfile:[K
+remote:        ruby '2.2.6'[K
+remote:        # See https://devcenter.heroku.com/articles/ruby-versions for more information.[K
+remote: 
+remote: ###### WARNING:[K
+remote:        No Procfile detected, using the default web server.[K
+remote:        We recommend explicitly declaring how to boot your server process via a Procfile.[K
+remote:        https://devcenter.heroku.com/articles/ruby-default-web-server[K
+remote: 
+remote: -----> Discovering process types[K
+remote:        Procfile declares types     -> (none)[K
+remote:        Default types for buildpack -> console, rake, web, worker[K
+remote: 
+remote: -----> Compressing...[K
+remote:        Done: 36.1M[K
+remote: -----> Launching...[K
+remote:        Released v16[K
+remote:        https://sgb-cjr.herokuapp.com/ deployed to Heroku[K
+remote: 
+remote: Verifying deploy... done.[K
+To https://git.heroku.com/sgb-cjr.git
+   342cb4f..fb12ce8  master -> master
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                            ]2;fred@fred-Lenovo-Z40-70: ~/Desktop/BibliotecaCJR]1;..BibliotecaCJR[0m[27m[24m[J[01;32m➜  [36mBibliotecaCJR[00m [01;34mgit:([31mmaster[34m) [33m✗[00m [K[?1h=[?2004hgit push heroku master[18Dcommit -m 'heroku'[18Dadd --all         [9D[13Dscript install git://github.com/adamwiggins/gmail_smtp.git[58Dplugin[52C[58Dscript/plugin install git://github.com/adamwiggins/gmail_smtp.git[65Dheroku run rails console                                         [41D[?1l>[?2004l
+]2;heroku run rails console]1;heroku[1000D[2K[?25lRunning [36m[1mrails console[22m[39m on [38;5;104m⬢ sgb-cjr[0m... [38;5;104m⣾[0m 
+[1A[38C[38;5;104m⣽[0m[1B[1000D[2K[1A[38C[38;5;104m⣻[0m[1B[1000D[2K[1A[38C[38;5;104m⢿[0m[1B[1000D[2K[1A[38C[38;5;104m⡿[0m[1B[1000D[2K[1A[38C[38;5;104m⣟[0m[1B[1000D[2K[1A[38C[38;5;104m⣯[0m[1B[1000D[2K[1A[38C[38;5;104m⣷[0m[1B[1000D[2K[1A[38C[38;5;104m⣾[0m[1B[1000D[2K[1A[38C[38;5;104m⣽[0m[1B[1000D[2K[1A[38C[38;5;104m⣻[0m[1B[1000D[2K[1A[38C[38;5;104m⢿[0m[1B[1000D[2K[1A[38C[38;5;104m⡿[0m[1B[1000D[2K[1A[38C[38;5;104m⣟[0m[1B[1000D[2K[1A[JRunning [36m[1mrails console[22m[39m on [38;5;104m⬢ sgb-cjr[0m... [38;5;104m⣯[0m starting, run.6924 (Free)
+[1A[38C[38;5;104m⣷[0m[1B[1000D[2K[1A[38C[38;5;104m⣾[0m[1B[1000D[2K[1A[38C[38;5;104m⣽[0m[1B[1000D[2K[1A[38C[38;5;104m⣻[0m[1B[1000D[2K[1A[38C[38;5;104m⢿[0m[1B[1000D[2K[1A[38C[38;5;104m⡿[0m[1B[1000D[2K[1A[38C[38;5;104m⣟[0m[1B[1000D[2K[1A[38C[38;5;104m⣯[0m[1B[1000D[2K[1A[JRunning [36m[1mrails console[22m[39m on [38;5;104m⬢ sgb-cjr[0m... [38;5;104m⣷[0m connecting, run.6924 (Free)
+[1A[38C[38;5;104m⣾[0m[1B[1000D[2K[1A[38C[38;5;104m⣽[0m[1B[1000D[2K[1A[38C[38;5;104m⣻[0m[1B[1000D[2K[1A[38C[38;5;104m⢿[0m[1B[1000D[2K[1A[38C[38;5;104m⡿[0m[1B[1000D[2K[1A[38C[38;5;104m⣟[0m[1B[1000D[2K[1A[38C[38;5;104m⣯[0m[1B[1000D[2K[1A[38C[38;5;104m⣷[0m[1B[1000D[2K[1A[38C[38;5;104m⣾[0m[1B[1000D[2K[1A[38C[38;5;104m⣽[0m[1B[1000D[2K[1A[38C[38;5;104m⣻[0m[1B[1000D[2K[1A[38C[38;5;104m⢿[0m[1B[1000D[2K[1A[38C[38;5;104m⡿[0m[1B[1000D[2K[1A[38C[38;5;104m⣟[0m[1B[1000D[2K[1A[38C[38;5;104m⣯[0m[1B[1000D[2K[1A[38C[38;5;104m⣷[0m[1B[1000D[2K[1A[38C[38;5;104m⣾[0m[1B[1000D[2K[1A[38C[38;5;104m⣽[0m[1B[1000D[2K[1A[38C[38;5;104m⣻[0m[1B[1000D[2K[1A[38C[38;5;104m⢿[0m[1B[1000D[2K[1A[38C[38;5;104m⡿[0m[1B[1000D[2K[1A[38C[38;5;104m⣟[0m[1B[1000D[2K[1A[38C[38;5;104m⣯[0m[1B[1000D[2K[1A[38C[38;5;104m⣷[0m[1B[1000D[2K[1A[38C[38;5;104m⣾[0m[1B[1000D[2K[1A[38C[38;5;104m⣽[0m[1B[1000D[2K[1A[38C[38;5;104m⣻[0m[1B[1000D[2K[1A[38C[38;5;104m⢿[0m[1B[1000D[2K[1A[38C[38;5;104m⡿[0m[1B[1000D[2K[1A[38C[38;5;104m⣟[0m[1B[1000D[2K[1A[38C[38;5;104m⣯[0m[1B[1000D[2K[1A[38C[38;5;104m⣷[0m[1B[1000D[2K[1A[38C[38;5;104m⣾[0m[1B[1000D[2K[1A[38C[38;5;104m⣽[0m[1B[1000D[2K[1A[38C[38;5;104m⣻[0m[1B[1000D[2K[1A[38C[38;5;104m⢿[0m[1B[1000D[2K[1A[38C[38;5;104m⡿[0m[1B[1000D[2K[1A[JRunning [36m[1mrails console[22m[39m on [38;5;104m⬢ sgb-cjr[0m... up, run.6924 (Free)
+[?25hLoading production environment (Rails 5.0.1)
+irb(main):001:0> CommumMailer.render_book(@user, @book).deliver_now[C[1Pbook).deliver_now[1Pook).deliver_nowBook).deliver_now[C[C[C.).deliver_nowl).deliver_nowa).deliver_nows).deliver_nowt).deliver_now[1@.[1@l[1@a[1@s[1@t[C[1P[1P[1@U
+D, [2017-02-21T01:34:50.803597 #4] DEBUG -- :   [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-02-21T01:34:50.831001 #4] DEBUG -- :   [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT  "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+I, [2017-02-21T01:34:50.853183 #4]  INFO -- :   Rendering commum_mailer/render_book.text.erb within layouts/mailer
+I, [2017-02-21T01:34:50.854482 #4]  INFO -- :   Rendered commum_mailer/render_book.text.erb within layouts/mailer (1.0ms)
+D, [2017-02-21T01:34:51.031299 #4] DEBUG -- : CommumMailer#render_book: processed outbound mail in 185.4ms
+I, [2017-02-21T01:34:51.242150 #4]  INFO -- : Sent mail to fredericodib@cjr.org.br (210.6ms)
+D, [2017-02-21T01:34:51.242252 
