@@ -18,6 +18,6 @@ class AdminMailer < ApplicationMailer
 		@book = book
 		@user = user
 		@user_admin = user_admin
-		mail(to: @user_admin.email, subject: 'Livro aluga')
+		mail(to: @user_admin.email, subject: 'Livro pendente')
 	end
 end

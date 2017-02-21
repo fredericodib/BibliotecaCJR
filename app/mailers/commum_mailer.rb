@@ -17,9 +17,4 @@ class CommumMailer < ApplicationMailer
 		@book = book
 		mail(to: @user.email, subject: 'Livro alugado')
 	end
-
-
-	def send_simple_message
-	    mail(to: "noe@cjr.org.br", subject: 'Hello')
-	end
 end
