@@ -89,6 +89,8 @@ Rails.application.configure do
 
   require 'mail'
 
+  config.action_mailer.default_url_options = { host: 'http://sgb-cjr.herokuapp.com/' }
+
   config.action_mailer.delivery_method = :smtp
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
