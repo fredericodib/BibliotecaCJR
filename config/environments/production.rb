@@ -92,10 +92,10 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
-   :address              => "smtp.mailgun.org",
+   :address              => "smtp.cjr.org",
    :port                 => 587,
-   :user_name            => "postmaster@cjr.org.br",
-   :password             => "18b594f4d8a1fa6dc012e7cc8df74315",
+   :user_name            => "noe@cjr.org.br",
+   :password             => "p455wnoecjr",
    :authentication       => "plain",
    :enable_starttls_auto => true
   }
