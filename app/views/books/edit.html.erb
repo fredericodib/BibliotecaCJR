@@ -3,5 +3,11 @@
 <%= render 'form', book: @book %>
 <br>
 
-<%= link_to 'Visualizar', @book %> |
-<%= link_to 'Voltar', books_path %>
+
+<%= link_to 'Voltar', books_path, class: 'btn btn-info' %> 
+&nbsp;
+&nbsp;
+<%= link_to 'Visualizar', @book, class: 'btn btn-primary' %>
+<br>
+<br>
+

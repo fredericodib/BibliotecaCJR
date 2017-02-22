@@ -3,9 +3,9 @@
 
   <div class="form-inputs">
     <%= f.input :name, label: "Nome" %>
-    <%= f.input :description, label: "Descrição" %>
     <%= f.input :writer, label: "Autor" %>
     <%= f.input :code, label: "Codigo" %>
+    <%= f.input :description,label: "Descrição" %>
     <hr>
     <%= f.label 'Imagem' %>
     <%= f.file_field :image %>
@@ -28,3 +28,10 @@
     <%= f.button :submit %>
   </div>
 <% end %>
+
+<script>
+  var simplemde = new SimpleMDE({
+    placeholder: 'Descrição do livro',
+    spellChecker: false
+  });
+</script>
