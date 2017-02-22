@@ -60,4 +60,17 @@ class Order < ApplicationRecord
     end
   end
 
+  def self.email_test
+    @user = User.last
+    @book = Book.first
+    @admin = User.first
+
+    AdminMailer.render_book_admin(@user, @book, @admin).deliver_now
+    CommumMailer.render_book(@user, @book).deliver_now
+    CommumMailer.almost_late_book(@user, @book).deliver_now
+    AdminMailer.late_book_admin(@user, @book, @admin).deliver_now
+    CommumMailer.late_book(@user, @book).deliver_now
+    AdminMailer.comfirm_book(@user, @book, @admin).deliver_now
+  end
+
 end
