@@ -3,7 +3,7 @@ class CommumMailer < ApplicationMailer
 	def render_book(user, book)
 		@user = user
 		@book = book
-		mail(to: @user.email, subject: 'Livro alugado')
+		mail(to: @user.email, subject: 'Livro alugado ' + @book.name.to_s)
 	end
 
 	def late_book(user, book)
