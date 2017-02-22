@@ -14,7 +14,7 @@ class Order < ApplicationRecord
   	@orders = Order.where(status: :rented)
   	@orders.each do |order|
   		now = Time.now
-  		if (now > order.created_at + 30.day)
+  		if (now > order.created_at)
   			order.late!
   			@users = User.where(admin: true).all
   			@users.each do |admin|

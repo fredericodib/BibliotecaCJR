@@ -16,7 +16,7 @@ namespace :tasks do
 	   Order.monday_confirmation_notification
 	end
 
-	task :heroku_test => :environment do
+	task :heroku => :environment do
 	   CommumMailer.render_book(User.last, Book.last).deliver_now
 	end
 end
