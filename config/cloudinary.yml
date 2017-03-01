@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hmgpzzmzu
+  api_key: '147333319841761'
+  api_secret: y-X8SLBVItyjvZqbcguJ647Hbv4
+  enhance_image_tag: true
+  static_image_support: true
+production:
+  cloud_name: hmgpzzmzu
+  api_key: '147333319841761'
+  api_secret: y-X8SLBVItyjvZqbcguJ647Hbv4
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hmgpzzmzu
+  api_key: '147333319841761'
+  api_secret: y-X8SLBVItyjvZqbcguJ647Hbv4
+  enhance_image_tag: true
+  static_image_support: false

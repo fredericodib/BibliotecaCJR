@@ -1,13 +1,14 @@
 class ImageUploader < CarrierWave::Uploader::Base
   # Adiciona o MiniMagick para permitir o redimensionamento das imagens
   include CarrierWave::MiniMagick
+  include Cloudinary::CarrierWave
  
-  storage :file
+  #storage :file
  
   # Local onde será guardado as imagens
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-  end
+  #def store_dir
+  #  "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  #end
 
   def default_url(*args)
     ActionController::Base.helpers.asset_path("fallback/" + [version_name, "produto-sem-imagem.gif"].compact.join('_'))
