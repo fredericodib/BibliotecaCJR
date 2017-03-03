@@ -52,7 +52,7 @@ class UsersController < ApplicationController
 
 	def admin_control
 		@user = current_user
-		@all_users = User.all
+		@all_users = User.all.order(email: :asc)
 		@orders_returned = Order.where(status: :returned).all.order(created_at: :asc)
 		@orders_confirmation = Order.where(status: :confirmation).all.order(created_at: :asc)
 		@orders_rented = Order.where(status: :rented).all.order(created_at: :asc)
