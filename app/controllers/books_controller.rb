@@ -7,7 +7,7 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.all.order(code: :asc)
-    @categories = Category.all
+    @categories = Category.all.order(name: :asc)
   end
 
   # GET /books/1
