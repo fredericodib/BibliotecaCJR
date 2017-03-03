@@ -4,12 +4,15 @@
   <div class="form-inputs">
     <%= f.input :name, label: "Nome" %>
     <%= f.input :writer, label: "Autor" %>
-    <%= f.input :code, label: "Codigo" %>
+    <%= f.input :code, label: "Código" %>
     <%= f.input :description,label: "Descrição" %>
     <hr>
     <%= f.label 'Imagem' %>
     <%= f.file_field :image %>
     <hr>
+    <strong>Categorias</strong>
+    <br>
+    <br>
     <%= hidden_field_tag("book[category_ids][]", nil) %>
     <div class="row">
       <%= f.collection_check_boxes :category_ids, Category.all, :id, :name, {:item_wrapper_class => 'col-xs-6 col-sm-4'} do |category| %>

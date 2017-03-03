@@ -14,8 +14,8 @@ class OrdersController < ApplicationController
 				AdminMailer.render_book_admin(@user, @book, admin).deliver_now
 			end
 			CommumMailer.render_book(@user, @book).deliver_now
-			redirect_to root_path, notice: 'Livro alugado com sucesso'
-		elsif condition == "Atualize seus dados antes!"
+			redirect_to root_path, notice: 'Livro alugado com sucesso!'
+		elsif condition == "Atualize seus dados antes de alugar o livro!"
 			redirect_to user_settings_path, alert: condition
 		else
 			redirect_to root_path, alert: condition
@@ -33,7 +33,7 @@ class OrdersController < ApplicationController
 	  		@users.each do |admin|
 	  			AdminMailer.comfirm_book(@order.user, @order.book, admin).deliver_now
 	  		end
-	  		redirect_to root_path, notice: 'Livro devolvido, espere a validação do admin!'
+	  		redirect_to root_path, notice: 'Livro devolvido, espere a validação do administrador!'
 	  	end
 	end
 
@@ -43,6 +43,6 @@ class OrdersController < ApplicationController
 		@order.book.update_attributes(active: true)
 		time = Time.now
 		@order.update_attributes(delivery_at: time)
-		redirect_to root_path, notice: 'Livro marcado como devolvido com sucesso!'
+		redirect_to root_path, notice: 'Livro devolvido com sucesso!'
 	end
 end

@@ -1,4 +1,4 @@
-<h2>Cadastrar Usuario</h2>
+<h2>Cadastrar Usuário</h2>
 
 <%= simple_form_for(@user) do |f| %>
   <%= f.error_notification %>
@@ -7,7 +7,7 @@
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true, label: "Senha", hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, label: "Confirmação de Senha", required: true %>
-    <%= f.input :admin, as: :boolean, checked_value: true, unchecked_value: false %>
+    <%= f.input :admin, as: :boolean, checked_value: true, unchecked_value: false, label: "Administrador" %>
   </div>
 
   <div class="form-actions">

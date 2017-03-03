@@ -17,8 +17,8 @@
   <!-- aba Meus livros -->
   <div class="tab-pane active" role="tabpanel" id="livros">
     <h3>Devolver Livro</h3>
-    <p>Ver todos os livros alugados</p>
-    <p>So marque como devolvido por aqui se o dono não puder mais colocar como pendente</p>
+    <p>Ver todos os livros alugados.</p>
+    <p>Só marque como devolvido por aqui se o usuário não puder colocar como pendente.</p>
     <br>
     <br>
     <h3>Atrasados</h3>
@@ -30,10 +30,10 @@
         <% @orders_late.each do |order| %>
           <h3><%= order.book.name %></h4>
            <div class="box-imput">
-            <p>Usuario: <strong><%= order.user.name %></strong> </p>
+            <p>Usuário: <strong><%= order.user.name %></strong> </p>
           </div>
           <div class="box-imput">
-            <p>Pego emprestado em: <strong><%= order.created_at - 3.hour %></strong> </p>
+            <p>Alugado em: <strong><%= order.created_at - 3.hour %></strong> </p>
           </div>
           <div class="box-imput">
            <p>status: 
@@ -52,10 +52,10 @@
         <% @orders_rented.each do |order| %>
           <h3><%= order.book.name %></h4>
            <div class="box-imput">
-            <p>Usuario: <strong><%= order.user.name %></strong> </p>
+            <p>Usuário: <strong><%= order.user.name %></strong> </p>
           </div>
           <div class="box-imput">
-            <p>Pego emprestado em: <strong><%= order.created_at - 3.hour %></strong> </p>
+            <p>Alugado em: <strong><%= order.created_at - 3.hour %></strong> </p>
           </div>
           <div class="box-imput">
            <p>status: 
@@ -80,10 +80,10 @@
         <% @orders_confirmation.each do |order| %>
           <h3><%= order.book.name %></h4>
            <div class="box-imput">
-            <p>Usuario: <strong><%= order.user.name %></strong> </p>
+            <p>Usuário: <strong><%= order.user.name %></strong> </p>
           </div>
           <div class="box-imput">
-            <p>Pego emprestado em: <strong><%= order.created_at - 3.hour %></strong> </p>
+            <p>Alugado em: <strong><%= order.created_at - 3.hour %></strong> </p>
           </div>
           <div class="box-imput">
            <p>status: 
@@ -105,10 +105,10 @@
         <% @orders_returned.each do |order| %>
           <h3><%= order.book.name %></h4>
            <div class="box-imput">
-            <p>Usuario: <strong><%= order.user.name %></strong> </p>
+            <p>Usuário: <strong><%= order.user.name %></strong> </p>
           </div>
           <div class="box-imput">
-            <p>Pego emprestado em: <strong><%= order.created_at - 3.hour %></strong> </p>
+            <p>Alugado em: <strong><%= order.created_at - 3.hour %></strong> </p>
           </div>
           <div class="box-imput">
             <p>Devolvido em: <strong><%= order.delivery_at  %></strong> </p>
@@ -125,7 +125,7 @@
 
   <!-- aba Livro em minha posse -->
   <div class="tab-pane" role="tabpanel" id="usuarios">
-    <h3>Todos os Usuarios</h3>
+    <h3>Todos os Usuários</h3>
     
     <table class="table table table-striped table-bordered table-hover">
       <thead>

@@ -17,7 +17,7 @@
   <!-- aba Meus Dados -->
   <div class="tab-pane active" role="tabpanel" id="dados">
     <h3>Meus Dados</h3>
-    <p>Atualize seus dados caso ainda n estejam atualizados</p>
+    <p>Atualize seus dados caso ainda não estejam atualizados.</p>
     <strong>Email: <%= @user.email %></strong>
     <br>
     <br>
@@ -63,7 +63,7 @@
       <% else %>
         <h3><%= @order.book.name %></h4>
         <div class="box-imput">
-          <p>Pego emprestado em: <strong><%= @order.created_at - 3.hour %></strong> </p>
+          <p>Alugado em: <strong><%= @order.created_at - 3.hour %></strong> </p>
         </div>
         <div class="box-imput">
           <% if (@order.rented?) %>

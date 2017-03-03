@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 	    @user.destroy
 	    respond_to do |format|
-	      format.html { redirect_to admin_control_url, notice: 'Usuario apagado com sucesso!' }
+	      format.html { redirect_to admin_control_url, notice: 'Usuário apagado com sucesso!' }
 	      format.json { head :no_content }
 	    end
 	end

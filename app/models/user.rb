@@ -15,25 +15,25 @@ class User < ApplicationRecord
 
   def can_rent_book?(book)
     if ((self.phone == "") || (self.name == "") || (self.phone == nil) || (self.name == nil))
-      return "Atualize seus dados antes!"
+      return "Atualize seus dados antes de alugar o livro!"
     end
 
     if book.active == false
-      return "Esse livro ja esta alugado"
+      return "Esse livro já está alugado!"
     end
 
     rented = self.orders.find_by(status: :rented)
     late = self.orders.find_by(status: :late)
     confirmation = self.orders.find_by(status: :confirmation)
     if ((rented != nil) || (late != nil) || (confirmation != nil))
-      return "Você ja possui um livro em sua posse"
+      return "Você já possui um livro alugado!"
     end
 
     order = self.orders.find_by(book_id: book.id)
     if (order != nil)
       today_date = Time.now
       if ((order.delivery_at + 10.days) > today_date)
-        return "voce devolveu esse livro a menos de 10 dias, espere mais " + (((order.delivery_at + 10.days - today_date)/86400).to_i).to_s + " dias"
+        return "voce devolveu esse livro a menos de 10 dias, espere mais " + (((order.delivery_at + 10.days - today_date)/86400).to_i).to_s + " dias, para alugá-lo!"
       end
     end
 
